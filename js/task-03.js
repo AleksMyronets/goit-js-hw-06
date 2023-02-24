@@ -12,3 +12,16 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+// Отримуємо список gallery
+
+const galleryList = document.querySelector('.gallery');
+
+// створюємо li для кожного зображення та додаємо їх в список 
+
+const galleryItemsMarkup = images.map(({ url, alt }) => {
+  return `<li class="gallery__item"><img class="gallery__img" src="${url}" alt="${alt}"></li>`;
+}).join('');
+
+galleryList.insertAdjacentHTML('beforeend', galleryItemsMarkup);
+galleryList.classList.add('.gallery');

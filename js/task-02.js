@@ -7,11 +7,11 @@ const ingredients = [
   'Condiments',
 ];
 
-// Отримуємо список ul#ingredients
+// Отримуємо список ingredients
 
 const ingredientsList = document.querySelector('#ingredients');
 
-// Створюємо масив елементів <li> для кожного елемента масиву ingredients
+// Створюємо масив елементів li для кожного елемента масиву ingredients
 
 const ingredientsItems = ingredients.map(ingredient => {
   const li = document.createElement('li');
@@ -20,6 +20,6 @@ const ingredientsItems = ingredients.map(ingredient => {
   return li;
 });
 
-// Додаємо всі елементи <li> за одну операцію у список ul#ingredients
+// Додаємо всі елементи li за одну операцію у список ingredients
 
 ingredientsList.append(...ingredientsItems);
